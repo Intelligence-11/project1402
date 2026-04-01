@@ -1,0 +1,376 @@
+/* ===== ОСНОВНЫЕ СТИЛИ ЗАГРУЗКИ ===== */
+:root {
+    --primary-pink: #ff7eb3;
+    --light-pink: #ffafcc;
+    --soft-pink: #ffe4ec;
+    --dark-pink: #ff5c8d;
+    --accent-gold: #ffd166;
+    --text-dark: #4a4a4a;
+    --text-light: #888;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #fff5f9 0%, #fff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Контейнер загрузки */
+.loading-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Фон с анимацией */
+.loading-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+    color: var(--light-pink);
+    opacity: 0.15;
+    font-size: 2rem;
+    animation: float 20s infinite linear;
+}
+
+.floating-heart:nth-child(1) {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-heart:nth-child(2) {
+    top: 70%;
+    right: 10%;
+    animation-delay: -4s;
+    font-size: 1.6rem;
+}
+
+.floating-heart:nth-child(3) {
+    bottom: 25%;
+    left: 20%;
+    animation-delay: -8s;
+    font-size: 2.5rem;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0.05;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.15;
+    }
+}
+
+/* Контент загрузки */
+.loading-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Заголовок */
+.loading-main {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.loading-title {
+    margin-bottom: 40px;
+}
+
+.loading-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.loading-title .highlight {
+    background: linear-gradient(120deg, var(--primary-pink) 0%, var(--accent-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация сердечек */
+.hearts-animation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0 60px;
+    position: relative;
+}
+
+.heart-pulse {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-pink);
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.heart-pulse:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.heart-pulse:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.heart-pulse:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+        box-shadow: 0 0 0 0 rgba(255, 126, 179, 0.7);
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 1;
+        box-shadow: 0 0 0 15px rgba(255, 126, 179, 0);
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
+        box-shadow: 0 0 0 0 rgba(255, 126, 179, 0);
+    }
+}
+
+/* Сообщения о загрузке */
+.loading-messages {
+    height: 60px;
+    margin: 30px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.message.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message i {
+    color: var(--primary-pink);
+    font-size: 1.3rem;
+}
+
+/* Прогресс-бар */
+.loading-progress {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-text {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.progress-percent {
+    color: var(--primary-pink);
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--soft-pink);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-pink), var(--accent-gold));
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.progress-time i {
+    color: var(--primary-pink);
+}
+
+/* Счётчик дней */
+.loading-counter {
+    text-align: center;
+    margin: 30px 0;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.counter-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 15px rgba(255, 126, 179, 0.2);
+}
+
+.counter-label {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Эффект свечения */
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 126, 179, 0.1) 0%, rgba(255, 126, 179, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(40px);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .loading-content {
+        padding: 30px 20px;
+    }
+    
+    .loading-title h1 {
+        font-size: 3.5rem;
+    }
+    
+    .counter-number {
+        font-size: 4rem;
+    }
+    
+    .message {
+        font-size: 1.1rem;
+    }
+    
+    .loading-messages {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-title h1 {
+        font-size: 2.8rem;
+    }
+    
+    .counter-number {
+        font-size: 3.5rem;
+    }
+    
+    .message {
+        font-size: 1rem;
+    }
+    
+    .progress-text {
+        font-size: 1rem;
+    }
+    
+    .progress-percent {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021 • Начало • Капсула времени</title>
+    <link rel="stylesheet" href="2021.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/heart.ico">
+</head>
+<body>
+    <!-- Анимированные сердечки на фоне -->
+    <div class="floating-hearts">
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+</div>
+
+    <!-- Загрузочный экран -->
+    <div class="year-loading" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2>Загрузка 2021 года...</h2>
+            <p>Подготовка воспоминаний о нашем начале</p>
+            <div class="loading-progress">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шапка на всю ширину -->
+    <header class="year-header">
+        <div class="header-content">
+            <a href="/main.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>На главную</span>
+            </a>
+            <div class="year-title">
+                <h1>2021</h1>
+                <div class="year-subtitle">Начало нашей истории</div>
+            </div>
+            <div class="header-date">
+                14.02.2021 — 31.12.2021
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="year-main">
+        <div class="container">
+            <!-- Приветственный блок -->
+            <section class="welcome-section">
+                <div class="welcome-card">
+                    <div class="welcome-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2>Добро пожаловать в 2021 год!</h2>
+                    <p class="welcome-text">
+                        Это был год, когда всё началось. Первые встречи, первые взгляды, 
+                        первые слова. Здесь хранятся самые трогательные моменты нашего начала.
+                    </p>
+                    <div class="welcome-stats">
+                        <div class="stat">
+                            <div class="stat-number">366</div>
+                            <div class="stat-label">дня вместе</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">улыбок</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">большое начало</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Галерея фото -->
+            <section class="gallery-section">
+                <h2 class="section-title">
+                    <i class="fas fa-images"></i>
+                    Наши фото 2021
+                </h2>
+                <p class="section-description">
+                    Самые памятные моменты нашего первого года
+                </p>
+                
+                <div class="gallery-collage">
+                    <div class="collage-row">
+                        <div class="collage-item main-photo">
+                            <div class="photo-frame">
+                                <img src="assets/photo1.jpg" alt="Наше первое фото" class="collage-img">
+                                <div class="photo-caption">Первое совместное фото</div>
+                            </div>
+                        </div>
+                        <div class="collage-item">
+                            <div class="photo-frame">
+                                <img src="assets/photo2.jpg" alt="Случайное событие" class="collage-img">
+                                <div class="photo-caption">Первая поездка</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collage-row">
+                        <div class="collage-item">
+                            <div class="photo-frame">
+                                <img src="assets/photo3.jpg" alt="Домашний вечер" class="collage-img">
+                                <div class="photo-caption">Домашний вечер</div>
+                            </div>
+                        </div>
+                        <div class="collage-item">
+                            <div class="photo-frame">
+                                <img src="assets/photo4.jpg" alt="Случайное счастье" class="collage-img">
+                                <div class="photo-caption">Случайное счастье</div>
+                            </div>
+                        </div>
+                        <div class="collage-item">
+                            <div class="photo-frame">
+                                <img src="assets/photo5.jpg" alt="Ещё один момент" class="collage-img">
+                                <div class="photo-caption">Ещё один момент</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Временная шкала -->
+            <section class="timeline-section">
+                <h2 class="section-title">
+                    <i class="fas fa-history"></i>
+                    Наша история 2021
+                </h2>
+                
+                <div class="timeline">
+                    <!-- Линия шкалы -->
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Вопрос 1 -->
+                    <div class="timeline-event">
+                        <div class="timeline-dot"></div>
+                        <div class="event-content">
+                            <h3>Наше первое предложение</h3>
+                            <p>День, когда всё началось...</p>
+                            <button class="reveal-btn" data-memory="february">
+                                <i class="fas fa-lock"></i>
+                                Раскрыть воспоминание
+                            </button>
+                            <div class="memory-content hidden" id="memory-february">
+                                <div class="memory-text">
+                                    <p>Тот особенный вечер, когда я понял, что хочу быть только с тобой. Мы сидели и разговаривали о самом важном, и в этот момент я решил, что хочу, чтобы наша история началась именно с тобой.</p>
+                                    <div class="memory-question">
+                                        <p><strong>Вопрос:</strong> Какое было местоположение, где я предложил тебе начать встречать в 13 лет?</p>
+                                        <div class="options">
+                                            <label>
+                                                <input type="radio" name="location" value="home">
+                                                <img src="assets/locations/home.png" alt="Двор" class="option-image">
+                                                Во дворе у дома Торайгырова 85
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="location" value="fountain">
+                                                <img src="assets/locations/fountain.png" alt="Набережная" class="option-image">
+                                                На набережной у фонтана
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="location" value="mosque">
+                                                <img src="assets/locations/mosque.png" alt="Мечеть" class="option-image">
+                                                На мечети
+                                            </label>
+                                        </div>
+                                        <button class="answer-btn" data-correct="home">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="timeline-event">
+                        <div class="timeline-dot"></div>
+                        <div class="event-content">
+                            <h3>Наше примирение</h3>
+                            <p>Тот важный момент, который укрепил нас...</p>
+                            <button class="reveal-btn" data-memory="march">
+                                <i class="fas fa-lock"></i>
+                                Раскрыть воспоминание
+                            </button>
+                            <div class="memory-content hidden" id="memory-march">
+                                <div class="memory-text">
+                                    <p>Иногда небольшие размолвки делают отношения только крепче. Этот момент показал нам, как важно говорить друг с другом и находить компромиссы.</p>
+                                    <div class="memory-question">
+                                        <p><strong>Вопрос:</strong> Точная дата и время, когда мы помирились в 21 году?</p>
+                                        <div class="options">
+                                            <label><input type="radio" name="date-time" value="1"> 14.02.2021, 2:14</label>
+                                            <label><input type="radio" name="date-time" value="2"> 14.02.2021, 3:00</label>
+                                            <label><input type="radio" name="date-time" value="3"> 14.02.2021, 2:00</label>
+                                        </div>
+                                        <button class="answer-btn" data-correct="3">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="timeline-event">
+                        <div class="timeline-dot"></div>
+                        <div class="event-content">
+                            <h3>Наш первый киносеанс</h3>
+                            <p>Когда мы впервые вместе пошли в кино...</p>
+                            <button class="reveal-btn" data-memory="may">
+                                <i class="fas fa-lock"></i>
+                                Раскрыть воспоминание
+                            </button>
+                            <div class="memory-content hidden" id="memory-may">
+                                <div class="memory-text">
+                                    <p>Мы выбирали фильм почти час, в итоге остановились на том, что посоветовал кассир. Ты ела попкорн, а я украдкой смотрел на твою реакцию во время самых напряжённых сцен.</p>
+                                    <div class="memory-question">
+                                        <p><strong>Вопрос:</strong> Какой кинофильм был первым просмотренным в кино у нас с тобой в 13 лет?</p>
+                                        <div class="text-input-group">
+                                            <input type="text" class="text-answer" id="movie-answer" placeholder="Введите название фильма...">
+                                        </div>
+                                        <button class="help-btn" id="help-btn-may">
+                                            <i class="fas fa-life-ring"></i> Спасалка
+                                        </button>
+                                        <div class="help-question hidden" id="help-question-may">
+                                            <p><strong>Второй вопрос:</strong> Какой кинофильм был просмотрен первым в начале наших нынешних отношений в кино?</p>
+                                            <input type="text" class="text-answer" id="movie-answer2" placeholder="Введите название фильма...">
+                                        </div>
+                                        <button class="answer-btn text-answer-btn" data-memory="may">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 4 -->
+                    <div class="timeline-event">
+                        <div class="timeline-dot"></div>
+                        <div class="event-content">
+                            <h3>Наши первые статусы</h3>
+                            <p>Когда мы решили рассказать всему миру о наших чувствах...</p>
+                            <button class="reveal-btn" data-memory="july">
+                                <i class="fas fa-lock"></i>
+                                Раскрыть воспоминание
+                            </button>
+                            <div class="memory-content hidden" id="memory-july">
+                                <div class="memory-text">
+                                    <p>Ты потратила целый день, выбирая идеальные слова. А я просто написал то, что чувствовал. Когда мы одновременно обновили статусы, это было волшебно.</p>
+                                    <div class="memory-question">
+                                        <p><strong>Вопрос:</strong> Что у нас написано в описании наших страниц в ВК?</p>
+                                        <div class="dual-input-group">
+                                            <div class="input-with-label">
+                                                <label>У тебя:</label>
+                                                <input type="text" class="text-answer" id="vk-answer-her" placeholder="Введите текст статуса...">
+                                            </div>
+                                            <div class="input-with-label">
+                                                <label>У меня:</label>
+                                                <input type="text" class="text-answer" id="vk-answer-me" placeholder="Введите текст статуса...">
+                                            </div>
+                                        </div>
+                                        <button class="answer-btn text-answer-btn" data-memory="july">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 5 -->
+                    <div class="timeline-event">
+                        <div class="timeline-dot"></div>
+                        <div class="event-content">
+                            <h3>Наши музыкальные ассоциации</h3>
+                            <p>Песни, которые стали саундтреком нашего года...</p>
+                            <button class="reveal-btn" data-memory="november">
+                                <i class="fas fa-lock"></i>
+                                Раскрыть воспоминание
+                            </button>
+                            <div class="memory-content hidden" id="memory-november">
+                                <div class="memory-text">
+                                    <p>Ты включала эту песню, когда мы ехали куда-то вместе. Я сначала делал вид, что не слушаю, но потом сам начал подпевать. Теперь эти мелодии напоминают мне о тебе.</p>
+                                    <div class="memory-question">
+                                        <p><strong>Вопрос:</strong> Из какой песни были взяты эти строки из предыдущего вопроса?</p>
+                                        <div class="options">
+                                            <label><input type="radio" name="song" value="5sta"> 5sta Family - Вместе Мы</label>
+                                            <label><input type="radio" name="song" value="miyagi"> Miyagi - I Got Love</label>
+                                            <label><input type="radio" name="song" value="vorobiev"> Алексей Воробьев - На стене в твоем подъезде</label>
+                                        </div>
+                                        <button class="answer-btn" data-correct="5sta">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция с кодом -->
+            <section class="code-section">
+                <div class="code-card">
+                    <div class="code-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Цифра для главного кода</h3>
+                    <p class="code-description">
+                        Пройди все воспоминания 2021 года и ответь на вопросы правильно, 
+                        чтобы получить цифру для главного кода доступа.
+                    </p>
+                    
+                    <div class="code-display">
+                        <div class="code-digit" id="yearCodeDigit">?</div>
+                        <div class="digit-label">Цифра от 2021 года</div>
+                    </div>
+                    
+                    <div class="additional-code hidden" id="additionalCode">
+                        <div class="code-icon-small">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                        <h4>Код для 2022 года</h4>
+                        <div class="full-code-display">
+                            <div class="code-char">7</div>
+                            <div class="code-char">4</div>
+                            <div class="code-char">5</div>
+                            <div class="code-char">9</div>
+                        </div>
+                        <p class="code-hint-small">Используй этот код на странице 2022 года</p>
+                    </div>
+                    
+                    <div class="progress-info">
+                        <div class="progress-text">
+                            Пройдено воспоминаний: <span id="completedCount">0</span>/5
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="memoryProgress"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-action">
+                        <a href="/main.html" class="code-home-btn">
+                            <i class="fas fa-home"></i>
+                            Вернуться на главную
+                        </a>
+                    </div>
+                    
+                    <div class="code-hint">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Эта цифра понадобится тебе на главной странице для открытия финального сюрприза</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер на всю ширину -->
+    <footer class="year-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-heart"></i>
+                <span>Капсула времени • 2021</span>
+            </div>
+            <div class="footer-actions">
+                <button class="reset-btn" id="resetBtn2021">
+                    <i class="fas fa-redo"></i>
+                    Сбросить прогресс 2021
+                </button>
+            </div>
+            <div class="footer-copy">
+                <p>Первый год нашей истории</p>
+                <p class="footer-note">Все воспоминания защищены любовью</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно подтверждения сброса -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Подтверждение</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Точно сбросить прогресс 2021 года?</p>
+                <p class="modal-warning">Все ответы и открытые воспоминания будут удалены. Это действие нельзя отменить.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn danger" id="confirmResetBtn">
+                    <i class="fas fa-trash"></i> Да, сбросить
+                </button>
+                <button class="modal-btn secondary" id="cancelResetBtn">
+                    Отмена
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно с цифрой -->
+    <div class="modal-overlay" id="codeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-star"></i> Поздравляем!</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Ты успешно прошла все воспоминания 2021 года!</p>
+                <div class="modal-code">
+                    <div class="modal-digit" id="modalCodeDigit">5</div>
+                    <div class="modal-code-label">Цифра для главного кода</div>
+                </div>
+                <div class="modal-additional-code">
+                    <div class="modal-full-code">
+                        <div class="modal-code-char">7</div>
+                        <div class="modal-code-char">4</div>
+                        <div class="modal-code-char">5</div>
+                        <div class="modal-code-char">9</div>
+                    </div>
+                    <div class="modal-code-label">Код для 2022 года</div>
+                </div>
+                <p class="modal-hint">
+                    Запомни эти коды или запиши. Цифра понадобится на главной странице 
+                    для составления полного кода доступа к сюрпризу. Код для 2022 года используй на следующей странице.
+                </p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn primary" id="copyCodeBtn">
+                    <i class="fas fa-copy"></i> Скопировать оба кода
+                </button>
+                <button class="modal-btn secondary" id="closeModalBtn">
+                    Понятно
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="2021.js"></script>
+    <!-- Фоновая музыка -->
+<audio id="bgMusic" autoplay loop>
+    <source src="2021.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Автоматическое воспроизведение музыки
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('bgMusic');
+        audio.volume = 0.3; // Громкость 30%
+        
+        // Пытаемся запустить музыку
+        var playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(function() {
+                // Если автозапуск заблокирован браузером, запускаем после любого клика
+                document.body.addEventListener('click', function() {
+                    audio.play();
+                }, { once: true });
+            });
+        }
+    });
+</script>
+</body>
+</html>

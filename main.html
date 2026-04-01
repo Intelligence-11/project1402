@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Капсула времени • 5 лет вместе</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/heart.ico">
+</head>
+<body>
+     <!-- Анимированный фон с множеством сердечек -->
+    <div class="floating-hearts-bg">
+        <!-- Первая группа сердечек (крупные) -->
+        <div class="heart-float large heart-1"><i class="fas fa-heart"></i></div>
+        <div class="heart-float large heart-2"><i class="fas fa-heart"></i></div>
+        <div class="heart-float large heart-3"><i class="fas fa-heart"></i></div>
+        
+        <!-- Вторая группа сердечек (средние) -->
+        <div class="heart-float medium heart-4"><i class="fas fa-heart"></i></div>
+        <div class="heart-float medium heart-5"><i class="fas fa-heart"></i></div>
+        <div class="heart-float medium heart-6"><i class="fas fa-heart"></i></div>
+        <div class="heart-float medium heart-7"><i class="fas fa-heart"></i></div>
+        <div class="heart-float medium heart-8"><i class="fas fa-heart"></i></div>
+        
+        <!-- Третья группа сердечек (маленькие) -->
+        <div class="heart-float small heart-9"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-10"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-11"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-12"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-13"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-14"><i class="fas fa-heart"></i></div>
+        <div class="heart-float small heart-15"><i class="fas fa-heart"></i></div>
+        
+        <!-- Особые сердечки (разные цвета) -->
+        <div class="heart-float special heart-16"><i class="fas fa-heart"></i></div>
+        <div class="heart-float special heart-17"><i class="fas fa-heart"></i></div>
+        <div class="heart-float special heart-18"><i class="fas fa-heart"></i></div>
+    </div>
+
+    <!-- Модальное окно для ввода кода года -->
+    <div class="modal-overlay" id="yearCodeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-lock"></i> Код доступа к <span id="modalYearTitle">2022</span> году</h2>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            
+            <p class="modal-description">
+                Введи 4-значный код, который ты найдёшь на странице этого года
+            </p>
+            
+            <div class="code-input-container">
+                <div class="code-input-display" id="yearCodeDisplay">
+                    <div class="code-digit-input" data-index="0"></div>
+                    <div class="code-digit-input" data-index="1"></div>
+                    <div class="code-digit-input" data-index="2"></div>
+                    <div class="code-digit-input" data-index="3"></div>
+                </div>
+                
+                <div class="code-keyboard">
+                    <div class="keyboard-row">
+                        <button class="key-btn" data-key="1">1</button>
+                        <button class="key-btn" data-key="2">2</button>
+                        <button class="key-btn" data-key="3">3</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key-btn" data-key="4">4</button>
+                        <button class="key-btn" data-key="5">5</button>
+                        <button class="key-btn" data-key="6">6</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key-btn" data-key="7">7</button>
+                        <button class="key-btn" data-key="8">8</button>
+                        <button class="key-btn" data-key="9">9</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key-btn btn-clear" id="clearCodeBtn"><i class="fas fa-backspace"></i></button>
+                        <button class="key-btn" data-key="0">0</button>
+                        <button class="key-btn btn-enter" id="submitYearCodeBtn"><i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" id="yearCodeError">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Неверный код. Попробуй ещё раз!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Капсула 5 лет</span>
+                </div>
+                <div class="date-display">
+                    14.02.2021 — 14.02.2026
+                </div>
+            </div>
+        </header>
+
+        <!-- Главный контент -->
+        <main class="main-content">
+            <!-- Приветственная секция -->
+            <section class="welcome-section">
+                <div class="anniversary-badge">
+                    <i class="fas fa-gem"></i>
+                    <span>5 лет вместе</span>
+                </div>
+                
+                <h1 class="main-title">
+                    Наша капсула<br>
+                    <span class="highlight">времени</span>
+                </h1>
+                
+                <p class="subtitle">
+                    Здесь хранятся самые дорогие моменты наших 5 лет.<br>
+                    Собери главный код доступа из цифр, которые ты найдёшь в каждом году.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number" id="daysCount">1826</div>
+                        <div class="stat-label">дней вместе</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">60</div>
+                        <div class="stat-label">месяцев</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">лет любви</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция годов -->
+            <section class="years-section">
+                <h2><i class="fas fa-history"></i> Наше путешествие</h2>
+                <p class="section-description">
+                    Пройди все годы, собери цифры и открой главный сюрприз
+                </p>
+                
+                <div class="years-grid">
+                    <!-- 2021 год -->
+                    <div class="year-card" data-year="2021" data-unlocked="true">
+                        <div class="year-number">2021</div>
+                        <div class="year-title">Начало</div>
+                        <div class="year-description">Первые встречи, знакомство, первые чувства</div>
+                        <a href="/pages/2021/2021.html" class="year-status unlocked">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Открыть</span>
+                        </a>
+                    </div>
+                    
+                    <!-- 2022 год -->
+                    <div class="year-card" data-year="2022" data-unlocked="false">
+                        <div class="year-number">2022</div>
+                        <div class="year-title">Становление</div>
+                        <div class="year-description">Первые поездки, привыкание друг к другу</div>
+                        <div class="year-status locked" data-year="2022">
+                            <i class="fas fa-lock"></i>
+                            <span>Нужен код</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023 год -->
+                    <div class="year-card" data-year="2023" data-unlocked="false">
+                        <div class="year-number">2023</div>
+                        <div class="year-title">Глубина</div>
+                        <div class="year-description">Серьёзные решения, поддержка, понимание</div>
+                        <div class="year-status locked" data-year="2023">
+                            <i class="fas fa-lock"></i>
+                            <span>Нужен код</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 2024 год -->
+                    <div class="year-card" data-year="2024" data-unlocked="false">
+                        <div class="year-number">2024</div>
+                        <div class="year-title">Гармония</div>
+                        <div class="year-description">Ритм жизни, взаимное развитие, планы</div>
+                        <div class="year-status locked" data-year="2024">
+                            <i class="fas fa-lock"></i>
+                            <span>Нужен код</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 2025-26 год -->
+                    <div class="year-card" data-year="2025" data-unlocked="false">
+                        <div class="year-number">2025-26</div>
+                        <div class="year-title">Будущее</div>
+                        <div class="year-description">Мечты, цели, новые горизонты вместе</div>
+                        <div class="year-status locked" data-year="2025">
+                            <i class="fas fa-lock"></i>
+                            <span>Нужен код</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция главного кода -->
+            <section class="main-code-section">
+                <h2><i class="fas fa-key"></i> Главный код доступа</h2>
+                <p class="section-description">
+                    Собери все 5 цифр из каждого года, чтобы открыть финальный сюрприз
+                </p>
+
+                <!-- Отображение кода -->
+                <div class="main-code-display">
+                    <div class="main-code-digit" data-index="1" data-year="2021">
+                        <div class="digit-number" contenteditable="true">?</div>
+                        <div class="digit-source">2021</div>
+                    </div>
+                    <div class="main-code-digit" data-index="2" data-year="2022">
+                        <div class="digit-number" contenteditable="true">?</div>
+                        <div class="digit-source">2022</div>
+                    </div>
+                    <div class="main-code-digit" data-index="3" data-year="2023">
+                        <div class="digit-number" contenteditable="true">?</div>
+                        <div class="digit-source">2023</div>
+                    </div>
+                    <div class="main-code-digit" data-index="4" data-year="2024">
+                        <div class="digit-number" contenteditable="true">?</div>
+                        <div class="digit-source">2024</div>
+                    </div>
+                    <div class="main-code-digit" data-index="5" data-year="2025">
+                        <div class="digit-number" contenteditable="true">?</div>
+                        <div class="digit-source">2025-26</div>
+                    </div>
+                </div>
+
+                <!-- Кнопки действий -->
+                <div class="code-actions">
+                    <button class="btn btn-check" id="checkMainCodeBtn">
+                        <i class="fas fa-gift"></i>
+                        Открыть сюрприз
+                    </button>
+                    <button class="btn btn-clear" id="clearMainCodeBtn">
+                        <i class="fas fa-redo"></i>
+                        Очистить код
+                    </button>
+                </div>
+
+                <!-- Прогресс -->
+                <div class="progress-info">
+                    <div class="progress-text">
+                        Собрано цифр: <span id="collectedDigits">0</span>/5
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="footer-text">
+                    <p>Создано с любовью к нашей 5-летней годовщине</p>
+                    <p class="footer-date">14 февраля 2021 — 14 февраля 2026</p>
+                </div>
+                
+                <!-- Кнопка обнуления -->
+                <div class="reset-button-container">
+                    <button class="reset-btn" id="resetBtn" title="Сбросить все прогрессы">
+                        <i class="fas fa-redo"></i>
+                        <span>Обнулить</span>
+                    </button>
+                    <div class="reset-hint">
+                        Нажми, если что-то пошло не так
+                    </div>
+                </div>
+                
+                <!-- Копирайт -->
+                <div class="footer-copyright">
+                    © 2026 Капсула времени. Все права на воспоминания защищены.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Автоматическая музыка -->
+            <audio id="yearMusic" loop autoplay style="display: none;">
+                <source src="main.mp3" type="audio/mpeg">
+                <!-- Для 2022 года замените src на: assets/audio/2022.mp3 -->
+                <!-- Для 2021 года замените src на: assets/audio/2021.mp3 -->
+                <!-- Для главной страницы замените src на: assets/audio/main.mp3 -->
+            </audio>
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const audio = document.getElementById('yearMusic');
+                
+                // Форсированный запуск музыки
+                audio.volume = 0.7; // Громкость 70%
+                
+                function forcePlay() {
+                    audio.play()
+                        .then(() => console.log('Музыка играет'))
+                        .catch(() => {
+                            // Если не получилось с первого раза, пробуем снова
+                            setTimeout(forcePlay, 1000);
+                        });
+                }
+                
+                forcePlay();
+                
+                // Музыка продолжит играть при переходе между страницами?
+                // Нет, так как каждая страница загружается заново.
+                // Если хотите непрерывность - используйте версию с localStorage из предыдущего ответа.
+            });
+            </script>
+</body>
+</html>

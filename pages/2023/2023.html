@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 • Глубина • Капсула времени</title>
+    <link rel="stylesheet" href="2023.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/heart.ico">
+</head>
+<body>
+    <!-- Уникальный анимированный фон для 2023 -->
+    <div class="year-background-2023">
+        <div class="depth-wave depth-wave-1"></div>
+        <div class="depth-wave depth-wave-2"></div>
+        <div class="depth-wave depth-wave-3"></div>
+        <div class="depth-wave depth-wave-4"></div>
+        <div class="depth-wave depth-wave-5"></div>
+        <div class="depth-wave depth-wave-6"></div>
+        <div class="depth-wave depth-wave-7"></div>
+        <div class="depth-wave depth-wave-8"></div>
+        
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        <div class="depth-drop"></div>
+        
+        <div class="depth-icon">
+            <i class="fas fa-water"></i>
+        </div>
+        <div class="depth-icon">
+            <i class="fas fa-infinity"></i>
+        </div>
+        <div class="depth-icon">
+            <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="depth-icon">
+            <i class="fas fa-waves"></i>
+        </div>
+        <div class="depth-icon">
+            <i class="fas fa-spa"></i>
+        </div>
+    </div>
+
+    <!-- Загрузочный экран -->
+    <div class="year-loading" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2>Загрузка 2023 года...</h2>
+            <p>Погружение в глубины нашей любви</p>
+            <div class="loading-progress">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шапка на всю ширину -->
+    <header class="year-header">
+        <div class="header-content">
+            <a href="/main.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>На главную</span>
+            </a>
+            <div class="year-title">
+                <h1>2023</h1>
+                <div class="year-subtitle">Глубина нашей любви</div>
+            </div>
+            <div class="header-date">
+                14.02.2023 — 14.02.2024
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="year-main" id="mainContent" style="opacity: 0;">
+        <!-- Приветственный блок -->
+        <section class="welcome-section">
+            <div class="welcome-card">
+                <div class="welcome-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h2>Добро пожаловать в 2023 год!</h2>
+                <p class="welcome-text">
+                    Это был год глубины и понимания. Мы погрузились в отношения, научились 
+                    слушать и слышать друг друга без слов. Этот год принёс нам уверенность, 
+                    взаимное уважение и осознание того, что мы созданы друг для друга.
+                </p>
+                <div class="welcome-stats">
+                    <div class="stat">
+                        <div class="stat-number">1095</div>
+                        <div class="stat-label">дней вместе</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">моментов понимания</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">уверенности в нас</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея фото -->
+        <section class="gallery-section">
+            <h2 class="section-title">
+                <i class="fas fa-images"></i>
+                Глубины 2023 года
+            </h2>
+            <p class="section-description">
+                Моменты, которые показали нам глубину наших чувств
+            </p>
+            
+            <div class="gallery-collage">
+                <div class="collage-row">
+                    <div class="collage-item main-photo">
+                        <div class="photo-frame">
+                            <img src="assets/photo1.jpg" alt="Парные кольца" class="collage-img">
+                            <div class="photo-caption">Встреча рассвета</div>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="photo-frame">
+                            <img src="assets/photo2.jpg" alt="Стикер с сердечком" class="collage-img">
+                            <div class="photo-caption">Любовь</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collage-row">
+                    <div class="collage-item">
+                        <div class="photo-frame">
+                            <img src="assets/photo3.jpg" alt="Подарок на 14 февраля" class="collage-img">
+                            <div class="photo-caption">Фотосессия на закате</div>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="photo-frame">
+                            <img src="assets/photo4.jpg" alt="Поход в лес" class="collage-img">
+                            <div class="photo-caption">Милый момент</div>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="photo-frame">
+                            <img src="assets/photo5.jpg" alt="Видео на 3 миллиона" class="collage-img">
+                            <div class="photo-caption">Тот самый стикер</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерактивная временная шкала -->
+        <section class="timeline-section">
+            <h2 class="section-title">
+                <i class="fas fa-history"></i>
+                Наша история 2023
+            </h2>
+            
+            <div class="timeline">
+                <!-- Точка линии -->
+                <div class="timeline-line"></div>
+                
+                <!-- Вопрос 1: Парные кольца -->
+                <div class="timeline-event" data-month="couple-rings">
+                    <div class="timeline-dot"></div>
+                    <div class="event-content">
+                        <h3>Наши парные кольца</h3>
+                        <p>Символ нашей любви, который мы носим до сих пор...</p>
+                        <button class="reveal-btn" data-memory="couple-rings">
+                            <i class="fas fa-lock"></i>
+                            Раскрыть воспоминание
+                        </button>
+                        <div class="memory-content hidden" id="memory-couple-rings">
+                            <div class="memory-text">
+                                <p>Помнишь, как я пытался подарить сюрпризом? Ты долго не хотела закрыть глаза на время чтобы я смогу быстренько надеть кольцо на твой пальчик, всё пыталась подглядеть, что же я там приготовил для тебя.</p>
+                                <div class="memory-question">
+                                    <p><strong>Вопрос:</strong> Когда были подарены парные кольца?</p>
+                                    <div class="options">
+                                        <label>
+                                            <input type="radio" name="couple-rings" value="march8">
+                                            На женский праздник (8 марта)
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="couple-rings" value="anniversary">
+                                            Наш день отношений
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="couple-rings" value="birthday">
+                                            На твой день рождения
+                                        </label>
+                                    </div>
+                                    <button class="answer-btn" data-correct="birthday">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 2: Стикер сердечко пальцами -->
+                <div class="timeline-event" data-month="heart-sticker">
+                    <div class="timeline-dot"></div>
+                    <div class="event-content">
+                        <h3>Тот самый стикер</h3>
+                        <p>Популярное сердечко пальцами, которое теперь везде...</p>
+                        <button class="reveal-btn" data-memory="heart-sticker">
+                            <i class="fas fa-lock"></i>
+                            Раскрыть воспоминание
+                        </button>
+                        <div class="memory-content hidden" id="memory-heart-sticker">
+                            <div class="memory-text">
+                                <p>Я даже не думал, что этот момент станет таким популярным. Просто захотел сделать тебе приятно, сложил пальцы сердечком, и сфоткал. Теперь этот стикер живёт в тысячах наших сообщениях, но для меня он всегда будет только твоим.</p>
+                                <div class="memory-question">
+                                    <p><strong>Вопрос:</strong> Когда был сделан популярный стикер сердечко пальцами мною?</p>
+                                    <div class="options">
+                                        <label>
+                                            <input type="radio" name="heart-sticker" value="feb24">
+                                            24 февраля
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="heart-sticker" value="apr7">
+                                            7 апреля
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="heart-sticker" value="may17">
+                                            17 мая
+                                        </label>
+                                    </div>
+                                    <button class="answer-btn" data-correct="feb24">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 3: Подарок на 14 февраля -->
+                <div class="timeline-event" data-month="valentines-gift">
+                    <div class="timeline-dot"></div>
+                    <div class="event-content">
+                        <h3>Подарок от тебя</h3>
+                        <p>То, что ты подарила мне на День всех влюблённых...</p>
+                        <button class="reveal-btn" data-memory="valentines-gift">
+                            <i class="fas fa-lock"></i>
+                            Раскрыть воспоминание
+                        </button>
+                        <div class="memory-content hidden" id="memory-valentines-gift">
+                            <div class="memory-text">
+                                <p>Я не ожидал. Честно. Это был такой классный подарок который будет всегда напоминать мне - о нас.</p>
+                                <div class="memory-question">
+                                    <p><strong>Вопрос:</strong> Какой был подарок от тебя на 14 февраля 2023 год?</p>
+                                    <div class="options">
+                                        <label>
+                                            <input type="radio" name="valentines-gift" value="handprint">
+                                            Картина с отпечатками рук
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="valentines-gift" value="tshirt">
+                                            Футболка
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="valentines-gift" value="blanket">
+                                            Плед
+                                        </label>
+                                    </div>
+                                    <button class="answer-btn" data-correct="handprint">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 4: Первый поход в лес -->
+                <div class="timeline-event" data-month="forest-trip">
+                    <div class="timeline-dot"></div>
+                    <div class="event-content">
+                        <h3>Наше лесное приключение</h3>
+                        <p>Первый раз, когда мы уехали вдвоём подальше от города...</p>
+                        <button class="reveal-btn" data-memory="forest-trip">
+                            <i class="fas fa-lock"></i>
+                            Раскрыть воспоминание
+                        </button>
+                        <div class="memory-content hidden" id="memory-forest-trip">
+                            <div class="memory-text">
+                                <p>Ты боялась всяких букашек, а я давно хотел выбраться на природу с тобой, было так хорошо тишина и твоя счастливая улыбка. Мы сидели на поваленном дереве, кушали сосиски, особенно те самые очень вкусные огурцы (которые ты замориновала - они были шикарны) и говорили о том, как классно было бы жить в таком месте.</p>
+                                <div class="memory-question">
+                                    <p><strong>Вопрос:</strong> Когда был первый совместный поход в лес?</p>
+                                    <div class="options">
+                                        <label>
+                                            <input type="radio" name="forest-trip" value="may31">
+                                            31 мая
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="forest-trip" value="june31">
+                                            31 июня
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="forest-trip" value="july31">
+                                            31 июля
+                                        </label>
+                                    </div>
+                                    <button class="answer-btn" data-correct="july31">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 5: Видео на 3 миллиона (с текстовым вводом) -->
+                <div class="timeline-event" data-month="viral-video">
+                    <div class="timeline-dot"></div>
+                    <div class="event-content">
+                        <h3>Тот самый залетевший видос</h3>
+                        <p>3 миллиона просмотров — и всё это случилось с тобой...</p>
+                        <button class="reveal-btn" data-memory="viral-video">
+                            <i class="fas fa-lock"></i>
+                            Раскрыть воспоминание
+                        </button>
+                        <div class="memory-content hidden" id="memory-viral-video">
+                            <div class="memory-text">
+                                <p>Я выложил и забыл. А через пару дней открыл — 100 тысяч, потом 500, потом миллион. А я думал только об одном: «Видела? Это же мы. Там ты на видео». И ты прислала просто: «горжусь тобой ❤️».</p>
+                                <div class="memory-question">
+                                    <p><strong>Вопрос:</strong> Что за видос залетел у меня на 3 миллиона?</p>
+                                    <div class="text-input-group">
+                                        <input type="text" class="text-answer" id="viral-video-answer" placeholder="Введи название или хештег...">
+                                    </div>
+                                    <button class="answer-btn text-answer-btn" data-memory="viral-video">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с кодами -->
+        <section class="code-section">
+            <div class="code-card">
+                <div class="code-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Коды для доступа</h3>
+                <p class="code-description">
+                    Пройди все воспоминания 2023 года и ответь на вопросы правильно, 
+                    чтобы получить коды для дальнейшего прохождения.
+                </p>
+                
+                <!-- Основная цифра кода -->
+                <div class="code-display">
+                    <div class="code-digit" id="yearCodeDigit">?</div>
+                    <div class="digit-label">Цифра для главного кода</div>
+                </div>
+                
+                <!-- Блок с кодом для 2024 года -->
+                <div class="code-for-next-year hidden" id="codeFor2024">
+                    <div class="next-year-code-header">
+                        <i class="fas fa-forward"></i>
+                        <h4>Код для доступа к 2024 году</h4>
+                    </div>
+                    <div class="next-year-code-display">
+                        <div class="next-year-code-char">9</div>
+                        <div class="next-year-code-char">6</div>
+                        <div class="next-year-code-char">3</div>
+                        <div class="next-year-code-char">1</div>
+                    </div>
+                    <p class="next-year-code-hint">
+                        Используй этот код на главной странице
+                    </p>
+                    <button class="btn-copy-next-year-code" id="copyCode2024BtnInline">
+                        <i class="fas fa-copy"></i> Скопировать код для 2024 года
+                    </button>
+                </div>
+                
+                <div class="progress-info">
+                    <div class="progress-text">
+                        Пройдено воспоминаний: <span id="completedCount">0</span>/5
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="memoryProgress"></div>
+                    </div>
+                </div>
+                
+                <div class="code-action">
+                    <a href="/main.html" class="code-home-btn">
+                        <i class="fas fa-home"></i>
+                        Вернуться на главную
+                    </a>
+                </div>
+                
+                <div class="code-hint">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>
+                        <strong>После прохождения всех воспоминаний ты получишь:</strong><br>
+                        1) Цифру для главного кода<br>
+                        2) Код для доступа к 2024 году
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="year-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-heart"></i>
+                <span>Капсула времени • 2023</span>
+            </div>
+            <div class="footer-actions">
+                <button class="reset-btn" id="resetBtn2023">
+                    <i class="fas fa-redo"></i>
+                    Сбросить прогресс 2023
+                </button>
+            </div>
+            <div class="footer-copy">
+                <p>Третий год нашей истории</p>
+                <p class="footer-note">Глубина нашей любви</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно подтверждения сброса -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Подтверждение</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Точно сбросить прогресс 2023 года?</p>
+                <p class="modal-warning">Все ответы и открытые воспоминания будут удалены.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn danger" id="confirmResetBtn">
+                    <i class="fas fa-trash"></i> Да, сбросить
+                </button>
+                <button class="modal-btn secondary" id="cancelResetBtn">
+                    Отмена
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Единое модальное окно с обоими кодами -->
+    <div class="modal-overlay" id="finalCodesModal">
+        <div class="modal-content final-codes-modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-trophy"></i> Поздравляем!</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Ты успешно прошла все воспоминания 2023 года! Вот твои коды:</p>
+                
+                <div class="modal-code-section">
+                    <h3><i class="fas fa-star"></i> Цифра для главного кода</h3>
+                    <div class="modal-main-code">
+                        <div class="modal-main-digit" id="modalMainDigit">3</div>
+                    </div>
+                    <p class="modal-code-description">
+                        Эта цифра понадобится на главной странице
+                    </p>
+                </div>
+                
+                <div class="modal-code-section">
+                    <h3><i class="fas fa-forward"></i> Код для доступа к 2024 году</h3>
+                    <div class="modal-full-code">
+                        <div class="modal-code-char">9</div>
+                        <div class="modal-code-char">6</div>
+                        <div class="modal-code-char">3</div>
+                        <div class="modal-code-char">1</div>
+                    </div>
+                    <p class="modal-code-description">
+                        Используй этот код на главной странице
+                    </p>
+                </div>
+                
+                <div class="modal-hint">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Совет:</strong> Запиши эти коды или сохрани скриншот!</p>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn primary" id="copyAllCodesBtn">
+                    <i class="fas fa-copy"></i> Скопировать оба кода
+                </button>
+                <button class="modal-btn secondary" id="closeFinalModalBtn">
+                    Понятно
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="2023.js"></script>
+    <!-- Автоматическая музыка -->
+            <audio id="yearMusic" loop autoplay style="display: none;">
+                <source src="/pages/2023/2023.mp3" type="audio/mpeg">
+                <!-- Для 2022 года замените src на: assets/audio/2022.mp3 -->
+                <!-- Для 2021 года замените src на: assets/audio/2021.mp3 -->
+                <!-- Для главной страницы замените src на: assets/audio/main.mp3 -->
+            </audio>
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const audio = document.getElementById('yearMusic');
+                
+                // Форсированный запуск музыки
+                audio.volume = 0.7; // Громкость 70%
+                
+                function forcePlay() {
+                    audio.play()
+                        .then(() => console.log('Музыка играет'))
+                        .catch(() => {
+                            // Если не получилось с первого раза, пробуем снова
+                            setTimeout(forcePlay, 1000);
+                        });
+                }
+                
+                forcePlay();
+                
+                // Музыка продолжит играть при переходе между страницами?
+                // Нет, так как каждая страница загружается заново.
+                // Если хотите непрерывность - используйте версию с localStorage из предыдущего ответа.
+            });
+            </script>
+</body>
+</html>

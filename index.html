@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка • Капсула времени</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/heart.ico">
+</head>
+<body>
+    <!-- Загрузочный экран -->
+    <div class="loading-container">
+        <!-- Анимированный фон как на главной -->
+        <div class="loading-background">
+            <div class="floating-heart"><i class="fas fa-heart"></i></div>
+            <div class="floating-heart"><i class="fas fa-heart"></i></div>
+            <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        </div>
+        
+        <!-- Основной контент загрузки -->
+        <div class="loading-content">
+            <!-- Центральная часть -->
+            <div class="loading-main">
+                <div class="loading-title">
+                    <h1>Наша капсула</h1>
+                    <h1 class="highlight">времени</h1>
+                </div>
+                
+                <!-- Анимация сердечек -->
+                <div class="hearts-animation">
+                    <div class="heart-pulse"></div>
+                    <div class="heart-pulse"></div>
+                    <div class="heart-pulse"></div>
+                </div>
+                
+                <!-- Сообщения о загрузке -->
+                <div class="loading-messages">
+                    <div class="message active" id="message1">
+                        <i class="fas fa-heart"></i>
+                        <span>Загрузка системы воспоминаний...</span>
+                    </div>
+                    <div class="message" id="message2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Инициализация модуля '2021 год'...</span>
+                    </div>
+                    <div class="message" id="message3">
+                        <i class="fas fa-images"></i>
+                        <span>Подготовка фотографий...</span>
+                    </div>
+                    <div class="message" id="message4">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Настройка интерактивных элементов...</span>
+                    </div>
+                    <div class="message" id="message5">
+                        <i class="fas fa-lock"></i>
+                        <span>Проверка доступа к капсуле...</span>
+                    </div>
+                    <div class="message" id="message6">
+                        <i class="fas fa-rocket"></i>
+                        <span>Всё готово! Перенаправление...</span>
+                    </div>
+                </div>
+                
+                <!-- Прогресс-бар -->
+                <div class="loading-progress">
+                    <div class="progress-info">
+                        <span class="progress-text">Подготовка капсулы</span>
+                        <span class="progress-percent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-time">
+                        <i class="fas fa-clock"></i>
+                        <span id="timeRemaining">7 секунд</span>
+                    </div>
+                </div>
+                
+                <!-- Счётчик дней -->
+                <div class="loading-counter">
+                    <div class="counter-number" id="loadingDays">1826</div>
+                    <div class="counter-label">дней вместе</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Эффект свечения -->
+        <div class="glow-effect"></div>
+    </div>
+
+    <script src="loading.js"></script>
+</body>
+</html>

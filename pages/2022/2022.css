@@ -1,0 +1,1927 @@
+/* ===== ОБНОВЛЕННЫЕ СТИЛИ СТРАНИЦЫ 2022 ===== */
+:root {
+    /* НОВАЯ ЦВЕТОВАЯ СХЕМА для 2022 года */
+    --year-color: #3498db; /* Голубой для 2022 года */
+    --year-light: #85c1e9;
+    --year-soft: #d6eaf8;
+    --year-dark: #2980b9;
+    --year-accent: #1abc9c;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ===== УНИКАЛЬНЫЙ ФОН ДЛЯ 2022 ГОДА ===== */
+.year-background-2022 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Плавающие элементы фона */
+.bg-element {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(52, 152, 219, 0.05);
+    animation: floatElement 25s infinite ease-in-out;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 8s;
+    background: rgba(26, 188, 156, 0.05);
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 16s;
+    background: rgba(41, 128, 185, 0.05);
+}
+
+.bg-wave {
+    position: absolute;
+    width: 200%;
+    height: 150px;
+    background: rgba(52, 152, 219, 0.03);
+    border-radius: 50%;
+    animation: waveAnimation 20s infinite linear;
+}
+
+.wave-top {
+    top: 0;
+    left: -50%;
+}
+
+.wave-bottom {
+    bottom: 0;
+    right: -50%;
+    animation-direction: reverse;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgba(52, 152, 219, 0.15);
+    animation: floatIcon 30s infinite linear;
+}
+
+.floating-icon:nth-child(6) { top: 15%; left: 15%; animation-delay: 0s; }
+.floating-icon:nth-child(7) { top: 40%; right: 20%; animation-delay: 10s; }
+.floating-icon:nth-child(8) { bottom: 30%; left: 30%; animation-delay: 20s; }
+
+@keyframes floatElement {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-50px) rotate(90deg); }
+    50% { transform: translateY(0) rotate(180deg); }
+    75% { transform: translateY(50px) rotate(270deg); }
+}
+
+@keyframes waveAnimation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+@keyframes floatIcon {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.15;
+    }
+    25% {
+        transform: translate(100px, 50px) rotate(90deg);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translate(50px, 100px) rotate(180deg);
+        opacity: 0.1;
+    }
+    75% {
+        transform: translate(-50px, 50px) rotate(270deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 0.15;
+    }
+}
+
+/* ===== ЗАГРУЗОЧНЫЙ ЭКРАН (новый стиль) ===== */
+.year-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--year-soft), var(--white));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.year-loading.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-content {
+    text-align: center;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+}
+
+.loading-heart {
+    font-size: 4rem;
+    color: var(--year-color);
+    margin-bottom: 30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.year-loading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.year-loading p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.loading-progress {
+    height: 6px;
+    background: var(--year-soft);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.loading-progress .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--year-color), var(--year-accent));
+    border-radius: 3px;
+    width: 0%;
+    animation: loadingProgress 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes loadingProgress {
+    0% { width: 0%; margin-left: 0; }
+    50% { width: 100%; margin-left: 0; }
+    100% { width: 0%; margin-left: 100%; }
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.year-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ШАПКА НА ВСЮ ШИРИНУ (как у 2021) ===== */
+.year-header {
+    width: 100%;
+    background: linear-gradient(135deg, var(--year-soft), var(--white));
+    border-bottom: 2px solid rgba(52, 152, 219, 0.15);
+    box-shadow: 0 4px 20px rgba(52, 152, 219, 0.1);
+    padding: 25px 0;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--year-color);
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: var(--white);
+    border: 2px solid var(--year-soft);
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+}
+
+.back-button:hover {
+    background: var(--year-color);
+    color: var(--white);
+    transform: translateX(-5px);
+    border-color: var(--year-color);
+}
+
+.year-title {
+    text-align: center;
+}
+
+.year-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: var(--year-color);
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.year-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.header-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    font-weight: 500;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--year-soft);
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.year-main {
+    padding: 20px 0 60px;
+}
+
+/* ===== ПРИВЕТСТВЕННЫЙ БЛОК (обновленный дизайн) ===== */
+.welcome-section {
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-card {
+    background: var(--white);
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(52, 152, 219, 0.1);
+    margin-bottom: 60px;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.welcome-icon {
+    font-size: 3rem;
+    color: var(--year-color);
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+}
+
+.welcome-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.welcome-text {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.welcome-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--year-color);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* ===== ГАЛЕРЕЯ ФОТО (обновленный стиль) ===== */
+.gallery-section {
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-title i {
+    color: var(--year-color);
+}
+
+.section-description {
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.gallery-collage {
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collage-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.collage-item {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--year-soft);
+}
+
+.collage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+    border-color: var(--year-light);
+}
+
+.collage-item.main-photo {
+    flex: 2;
+}
+
+.photo-frame {
+    position: relative;
+    height: 100%;
+}
+
+.collage-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.collage-item:hover .collage-img {
+    transform: scale(1.05);
+}
+
+.collage-item.main-photo .collage-img {
+    height: 450px;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(41, 128, 185, 0.9), transparent);
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ===== ВРЕМЕННАЯ ШКАЛА (как у 2021, но с новыми цветами) ===== */
+.timeline-section {
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Линия шкалы времени */
+.timeline-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--year-color), var(--year-accent));
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline-event {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 80px;
+    min-height: 120px;
+}
+
+/* Точки на линии */
+.timeline-dot {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: var(--year-color);
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 3px var(--year-soft);
+    z-index: 2;
+}
+
+.event-content {
+    flex: 1;
+    position: relative;
+}
+
+.event-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.event-content > p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Кнопки раскрытия (обновленный цвет) */
+.reveal-btn {
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.reveal-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+.reveal-btn.opened {
+    background: linear-gradient(135deg, var(--year-accent), #16a085);
+}
+
+.reveal-btn.opened i {
+    content: '\f00c';
+}
+
+/* Изображения в опциях */
+.option-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--year-soft);
+    transition: var(--transition);
+}
+
+.options label:hover .option-image {
+    border-color: var(--year-color);
+    transform: scale(1.02);
+}
+
+/* Содержимое воспоминаний */
+.memory-content {
+    margin-top: 25px;
+    padding: 25px;
+    background: var(--year-soft);
+    border-radius: 15px;
+    border-left: 4px solid var(--year-color);
+}
+
+.memory-text p {
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.memory-question {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.memory-question p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.options label:hover {
+    background: #e9ecef;
+}
+
+.options input[type="radio"] {
+    accent-color: var(--year-color);
+}
+
+/* Текстовые поля ввода */
+.text-input-group, .dual-input-group {
+    margin: 20px 0;
+}
+
+.text-answer {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--year-soft);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: var(--transition);
+    margin-bottom: 10px;
+}
+
+.text-answer:focus {
+    outline: none;
+    border-color: var(--year-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.dual-input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-with-label {
+    flex: 1;
+}
+
+.input-with-label label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Кнопка "Спасалка" */
+.help-btn {
+    background: linear-gradient(135deg, var(--year-accent), #16a085);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    margin: 15px 0;
+}
+
+.help-btn:hover {
+    background: linear-gradient(135deg, #16a085, #138d75);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.2);
+}
+
+.help-question {
+    background: rgba(26, 188, 156, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border-left: 4px solid var(--year-accent);
+}
+
+.help-question p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Кнопки ответов */
+.answer-btn {
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 14px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.answer-btn:hover {
+    background: linear-gradient(135deg, var(--year-dark), #21618c);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(52, 152, 219, 0.3);
+}
+
+.answer-btn.correct {
+    background: linear-gradient(135deg, var(--year-accent), #16a085);
+}
+
+.answer-btn.incorrect {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+}
+
+.text-answer-btn {
+    width: 100%;
+}
+
+/* ===== СЕКЦИЯ С КОДОМ (обновленный стиль) ===== */
+.code-section {
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.code-card {
+    background: linear-gradient(135deg, var(--year-soft), #fff);
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    border: 2px solid var(--year-light);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--year-color), var(--year-accent));
+}
+
+.code-icon {
+    font-size: 3rem;
+    color: var(--year-color);
+    margin-bottom: 25px;
+}
+
+.code-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.code-description {
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.code-display {
+    margin: 40px 0;
+}
+
+.code-digit {
+    width: 120px;
+    height: 120px;
+    background: var(--white);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--year-color);
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+    border: 3px solid var(--year-light);
+    transition: all 0.5s ease;
+}
+
+.code-digit.revealed {
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    color: var(--white);
+    transform: scale(1.1);
+    animation: pulse 1s ease;
+}
+
+.digit-label {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Дополнительный код для 2023 года */
+.additional-code {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    border: 2px solid var(--year-light);
+}
+
+.code-icon-small {
+    font-size: 2rem;
+    color: var(--year-color);
+    margin-bottom: 15px;
+}
+
+.additional-code h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.full-code-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.code-char {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.code-hint-small {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.progress-info {
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.progress-text span {
+    color: var(--year-color);
+    font-weight: 700;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--year-color), var(--year-accent));
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* Кнопка "Вернуться на главную" */
+.code-action {
+    margin: 30px 0 20px;
+}
+
+.code-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--year-color);
+    font-weight: 500;
+    padding: 14px 30px;
+    background: var(--white);
+    border-radius: 25px;
+    border: 2px solid var(--year-color);
+    transition: var(--transition);
+    font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+}
+
+.code-home-btn:hover {
+    background: var(--year-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
+}
+
+.code-hint {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.code-hint i {
+    font-size: 1.5rem;
+    color: var(--year-color);
+    flex-shrink: 0;
+}
+
+.code-hint p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* ===== ФУТЕР НА ВСЮ ШИРИНУ (как у 2021) ===== */
+.year-footer {
+    width: 100%;
+    background: linear-gradient(135deg, var(--year-soft), rgba(255, 255, 255, 0.9));
+    padding: 40px 0;
+    border-top: 1px solid rgba(52, 152, 219, 0.1);
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--year-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.footer-logo i {
+    font-size: 1.5rem;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.reset-btn {
+    background: var(--year-soft);
+    color: var(--year-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.reset-btn:hover {
+    background: var(--year-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.footer-copy {
+    text-align: right;
+}
+
+.footer-copy p {
+    color: var(--text-light);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.footer-note {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* ===== СТИЛИ ДЛЯ УВЕДОМЛЕНИЙ (новые цвета) ===== */
+.year-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transform: translateX(150%);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-width: 400px;
+    min-width: 280px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+.year-notification.show {
+    transform: translateX(0);
+}
+
+.year-notification.success {
+    border-left: 5px solid var(--year-accent);
+}
+
+.year-notification.success i {
+    color: var(--year-accent);
+}
+
+.year-notification.error {
+    border-left: 5px solid #ff6b6b;
+}
+
+.year-notification.error i {
+    color: #ff6b6b;
+}
+
+.year-notification i {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.year-notification span {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ===== МОДАЛЬНЫЕ ОКНА (обновленные цвета) ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 550px;
+    width: 90%;
+    animation: slideUp 0.4s ease;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--year-soft);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: #f8f9fa;
+    color: var(--text-dark);
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.modal-code {
+    margin: 30px 0;
+}
+
+.modal-digit {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 auto 15px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+}
+
+.modal-code-label {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Дополнительный код в модальном окне */
+.modal-additional-code {
+    margin: 30px 0;
+}
+
+.modal-full-code {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.modal-code-char {
+    width: 50px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+.modal-hint {
+    font-size: 0.95rem !important;
+    color: var(--text-light);
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.modal-btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 160px;
+}
+
+.modal-btn.primary {
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    color: var(--white);
+}
+
+.modal-btn.secondary {
+    background: #f8f9fa;
+    color: var(--text-dark);
+    border: 1px solid #dee2e6;
+}
+
+.modal-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-btn:active {
+    transform: translateY(0);
+}
+
+/* Модальное окно подтверждения */
+.confirm-modal {
+    max-width: 450px;
+}
+
+.modal-warning {
+    color: #ff6b6b;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.modal-btn.danger {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    color: var(--white);
+}
+
+.modal-btn.danger:hover {
+    background: linear-gradient(135deg, #ff4757, #ff2e43);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ МОДАЛЬНЫХ ОКОН ===== */
+
+/* Анимация появления модального окна */
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Стиль для модального окна с кодом 2023 */
+#code2023Modal .modal-content {
+    animation: modalAppear 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#code2023Modal .modal-header h2 i {
+    color: var(--year-accent);
+}
+
+/* Улучшенные стили для кодов в модальных окнах */
+.modal-full-code {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    animation: codeAppear 0.6s ease-out;
+}
+
+.modal-code-char {
+    width: 70px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+}
+
+.modal-code-char:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4);
+}
+
+.modal-code-label {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Анимация появления кодов */
+@keyframes codeAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль для уведомлений */
+.year-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transform: translateX(150%);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-width: 400px;
+    min-width: 280px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+.year-notification.show {
+    transform: translateX(0);
+}
+
+.year-notification.success {
+    border-left: 5px solid var(--year-accent);
+}
+
+.year-notification.success i {
+    color: var(--year-accent);
+}
+
+.year-notification.error {
+    border-left: 5px solid #ff6b6b;
+}
+
+.year-notification.error i {
+    color: #ff6b6b;
+}
+
+.year-notification i {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.year-notification span {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ===== ОБЯЗАТЕЛЬНЫЙ СТИЛЬ ДЛЯ СКРЫТЫХ ЭЛЕМЕНТОВ ===== */
+.hidden {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Стиль для memory-content когда он не скрыт */
+.memory-content:not(.hidden) {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    pointer-events: all;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== СТИЛИ ДЛЯ БЛОКА КОДА 2023 ГОДА ===== */
+.code-for-next-year {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(26, 188, 156, 0.1));
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    border: 2px solid var(--year-light);
+    text-align: center;
+}
+
+.next-year-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.next-year-code-header i {
+    font-size: 1.8rem;
+    color: var(--year-accent);
+}
+
+.next-year-code-header h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.next-year-code-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.next-year-code-char {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--year-accent), #16a085);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(26, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.next-year-code-hint {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.btn-copy-next-year-code {
+    background: linear-gradient(135deg, var(--year-accent), #16a085);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-copy-next-year-code:hover {
+    background: linear-gradient(135deg, #16a085, #138d75);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.2);
+}
+
+.btn-copy-next-year-code:active {
+    transform: translateY(0);
+}
+
+/* ===== СТИЛИ ДЛЯ ЕДИНОГО МОДАЛЬНОГО ОКНА ===== */
+.final-codes-modal .modal-content {
+    max-width: 600px;
+    animation: modalAppear 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.final-codes-modal .modal-header h2 i {
+    color: var(--year-accent);
+}
+
+.modal-code-section {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid var(--year-color);
+}
+
+.modal-code-section:nth-child(3) {
+    border-left-color: var(--year-accent);
+}
+
+.modal-code-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-code-section h3 i {
+    font-size: 1.5rem;
+}
+
+.modal-main-code {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.modal-main-digit {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--year-color), var(--year-dark));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 auto 10px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.modal-code-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.modal-hint {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.modal-hint i {
+    font-size: 1.5rem;
+    color: var(--year-accent);
+    margin-top: 3px;
+}
+
+.modal-hint p {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Анимация появления модального окна */
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Анимация пульсации для кодов */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ===== СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ ПЕРВОГО ВОПРОСА ===== */
+.timeline-event[data-month="favorite-photo"] .option-image {
+    width: 100%;
+    height: 900px !important;  /* Добавил !important для принудительного применения */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid var(--year-soft);
+}
+
+.timeline-event[data-month="march"] .options label {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .next-year-code-display {
+        gap: 10px;
+    }
+    
+    .next-year-code-char {
+        width: 50px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    .modal-main-digit {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+    
+    .modal-code-section {
+        padding: 15px;
+    }
+    
+    .modal-code-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .next-year-code-char {
+        width: 40px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .modal-main-digit {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .modal-full-code {
+        gap: 10px;
+    }
+    
+    .modal-code-char {
+        width: 60px;
+        height: 80px;
+        font-size: 2.2rem;
+    }
+    
+    .year-notification {
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-code-char {
+        width: 50px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .back-button {
+        align-self: flex-start;
+    }
+    
+    .header-date {
+        margin-top: 10px;
+    }
+    
+    .welcome-stats {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .stat {
+        min-width: 200px;
+    }
+    
+    .collage-row {
+        flex-direction: column;
+    }
+    
+    .collage-item.main-photo {
+        flex: 1;
+    }
+    
+    /* Адаптивность временной шкалы */
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .timeline-event {
+        padding-left: 60px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .dual-input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-copy {
+        text-align: center;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .modal-btn {
+        width: 100%;
+    }
+    
+    .year-notification {
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .year-title h1 {
+        font-size: 3rem;
+    }
+    
+    .welcome-card {
+        padding: 30px;
+    }
+    
+    .welcome-card h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .code-card {
+        padding: 30px;
+    }
+    
+    .options label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .option-image {
+        height: 120px;
+    }
+    
+    .full-code-display,
+    .modal-full-code {
+        gap: 10px;
+    }
+    
+    .code-char,
+    .modal-code-char {
+        width: 50px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    /* Адаптивность временной шкалы для мобильных */
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .timeline-event {
+        padding-left: 50px;
+        min-height: 100px;
+    }
+    
+    .timeline-dot {
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .year-container {
+        padding: 0 15px;
+    }
+    
+    .year-header, .year-footer {
+        padding: 20px 0;
+    }
+    
+    .welcome-card {
+        padding: 25px;
+    }
+    
+    .code-digit {
+        width: 100px;
+        height: 100px;
+        font-size: 3.5rem;
+    }
+    
+    .collage-row {
+        flex-direction: column;
+    }
+    
+    .collage-item.main-photo {
+        flex: 1;
+    }
+    
+    /* Адаптивность временной шкалы для очень маленьких экранов */
+    .timeline-line {
+        display: none;
+    }
+    
+    .timeline-event {
+        padding-left: 0;
+    }
+    
+    .timeline-dot {
+        display: none;
+    }
+}
